@@ -10,7 +10,7 @@ import math
 this is a comment block print("test") does not print because of triple "double quotes"
 """
 
-
+"""
 print("Hello World!")
 
 #VARIABLES
@@ -59,3 +59,41 @@ print(2**5) # if multiple **, they evaluate right to left
 # a .py file AKA a module AKA script
 
 print(math.pow(2, 5))
+
+# GETTING USER INPUT
+print("What is your favorite number:")
+favNum = input()
+print ("THE FAV NUM IS :", favNum)
+print ("FAV NUM DOUBLED IS:" , favNum * 2)
+print(type(favNum))
+
+# if we want to arithmetically double the favNum, we need to "convert" favNum to an int or float
+# this is called type conversion and there are built-in functions to do this
+
+favNumInt = int(favNum)
+print ("FAV NUM DOUBLED IS", favNumInt * 2)
+"""
+# FORMATTING DECIMALS
+
+# Few different ways to do this
+#1. C style (old school)
+print(math.pi)
+print("%.2f" % (math.pi))
+
+#2. Pythonic way (new school)
+print("{:.3f}".format(math.pi))
+
+#3. round() actually rounds the number and it can be stored as such
+print(round(math.pi, 15))
+
+# CONDITIONALS (if statements)
+# if some condition (AKA boolean condition) is true, then execute some code (body of if statement)
+
+x = 5
+if x == 5:
+  print("THIS IS TRUE")
+  # this is the body
+  #boolean evaluates to true
+  # standard indentation is 1 tab = 4 spaces
+else:
+  print ("NOT TRUE")
