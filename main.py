@@ -115,10 +115,66 @@ else:
   # for loop structure
   # for item in sequence:
   #  body (statements we want to repeat)
-  
-  my_list = [1,2,3,4,5]
-  for item in my_list:
-    print(item)
+
+my_list = [1, 2, 3, 4, 5]
+for item in my_list:
+  print(item)
   #strings are sequences!
-  for character in "gonzaga":
-    print(character)
+for character in "gonzaga":
+  print(character)
+
+  # we can generate our own sequences
+  # built in function range() generates a sequence
+  # range(9) # generates a sequence [0,9)
+
+for i in range(9):
+  print(i,end= " ")
+print() # EXTRA PRINT IS JUST A NEWLINE
+
+  # range(stop) : [0,stop)
+  # range(start, stop) : [start,stop)
+  # range(start, stop, step) : [start,stop) going up by step (increment)
+
+for i in range(4,9):
+    print(i, end= " ")
+print()
+
+for i in range(4,9,2):
+  print(i, end= " ")
+print()
+
+for i in range(8,3,-2):
+  print(i, end= " ")
+print()
+
+for i in range(2,40,2):
+  print(i, end= ", ")
+print(i + 2)
+
+# while loop structure
+# while some condition is true:
+#  body
+#  progress towards your condition being false
+
+k = 2
+
+while (k <= 40):
+  print(k,end=",")
+  k += 2 #progress
+print(k)
+
+#ADVANCED LOOPS
+# like if statements, we can nest loops
+# use break keyword to get an early exit from a loop
+
+""""
+while True:
+  user_input = input("Enter 'stop' to exit loop:")
+  if user_input == "stop":
+    break
+"""
+#FUNCTIONS
+# a function is a named sequence of statements
+# use functions to minimize redundant code
+# write once, call multiple times
+# helps with code organization
