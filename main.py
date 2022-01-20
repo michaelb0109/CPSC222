@@ -108,3 +108,17 @@ elif x > 0: #x > 0
   print("x is positive")
 else:
   print("x is 0")
+
+  #Loops- use a loop to repeat statements
+  #we have for loops and while loops in python
+
+  # for loop structure
+  # for item in sequence:
+  #  body (statements we want to repeat)
+  
+  my_list = [1,2,3,4,5]
+  for item in my_list:
+    print(item)
+  #strings are sequences!
+  for character in "gonzaga":
+    print(character)
