@@ -5,6 +5,7 @@
 #PUT ALL IMPORT STATEMENTS AT TOP
 
 import math
+import random
 
 """
 this is a comment block print("test") does not print because of triple "double quotes"
@@ -178,3 +179,76 @@ while True:
 # use functions to minimize redundant code
 # write once, call multiple times
 # helps with code organization
+
+# help(print)
+
+# examples of function calls: help(), print(), round(), int(), input(),....
+# we can write our own functions
+# functions take inputs (arguments in the call, parameters in the function header)
+# functions produce outputs (results AKA return values)
+# function structure
+# def function_name(parameter list):
+#    body
+
+# body does not execute until the function is called
+
+# example 1: no parameters (no arguments supplied when we call the function)
+# and no return value
+def say_hello():
+    print("hello")
+
+say_hello() # function call
+
+"""
+for _ in range(5):
+    say_hello()
+"""
+# example 2: one parameter (one argument when we call) and no return value
+
+def say(message):  # message is a parameter
+    print(message)
+
+say("hi there")
+say(5)
+
+# TASK: define/call a function that accepts the radius of a circle and prints out the area of that circle
+
+def circle_area(radius):
+    area = math.pi * radius ** 2
+    print("area:", area)
+
+circle_area(1.0)
+
+# example 3: 
+
+def circle_area2(radius):
+    area = math.pi * radius ** 2
+    return area
+
+result = circle_area2(2.0)
+print("result:", result)
+
+# example 4: one parameter and two return values
+def circle_area_and_circum(radius):
+    area = (radius ** 2) * math.pi
+    circum = 2 * math.pi * radius
+    return area, circum # tuple (immutable list)
+
+results = circle_area_and_circum(5.0)
+print("results:", results[0], results[1]) # results is a tuple
+result1, result2 = circle_area_and_circum(5.0) # tuple unpacking
+print(result1, result2)
+
+# RANDOM NUMBERS
+# often we need a random number to simulate something or to setup the initial state for an algorithm
+# import random module
+# if we want the same number everytime the program is run...
+random.seed(1) # constant
+# 1. produces reproducable results
+# 2. debugging purposes
+
+# let's simulate rolling a 6-sided die
+die_roll = random.randint(1,6) #[1, 6]
+print("die_roll:", die_roll)
+die_roll = random.randrange(1,7) # [1, 7]
+print("die_roll:", die_roll)
